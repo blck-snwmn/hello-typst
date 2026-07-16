@@ -3,7 +3,7 @@ typst = "0.15.0"
 
 [tasks.chart]
 description = "Generate the SVG chart from CSV data"
-run = "typst compile --root . charts/monthly-documents.typ assets/monthly-documents.svg"
+run = 'typst compile --input font="${TYPST_FONT:-Hiragino Sans}" --root . charts/monthly-documents.typ assets/monthly-documents.svg'
 sources = ["charts/monthly-documents.typ", "data/monthly-documents.csv"]
 outputs = ["assets/monthly-documents.svg"]
 
@@ -12,5 +12,5 @@ description = "Generate the chart and compile the PDF"
 depends = ["chart"]
 run = [
   "mkdir -p output/pdf",
-  "typst compile main.typ output/pdf/main.pdf",
+  'typst compile --input font="${TYPST_FONT:-Hiragino Sans}" main.typ output/pdf/main.pdf',
 ]

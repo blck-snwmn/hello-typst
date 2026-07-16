@@ -5,7 +5,7 @@
   fill: none,
 )
 #set text(
-  font: "Hiragino Sans",
+  font: sys.inputs.at("font", default: "Hiragino Sans"),
   lang: "ja",
   fill: rgb("17233c"),
 )

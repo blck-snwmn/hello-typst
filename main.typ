@@ -4,7 +4,7 @@
   margin: 24mm,
 )
 #set text(
-  font: "Hiragino Sans",
+  font: sys.inputs.at("font", default: "Hiragino Sans"),
   lang: "ja",
   size: 10.5pt,
 )
